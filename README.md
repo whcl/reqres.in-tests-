@@ -1,4 +1,4 @@
-#Запуск автотестов
+# Запуск автотестов
 <p>В рабочей директории выполнить следующие команды: </p>
 <p>
 pip install -r requirements.txt
@@ -7,7 +7,7 @@ pip install -r requirements.txt
 pytest
 </p>
 
-#Протестирован эндапоинт api/users для https://reqres.in/
+# Протестирован эндапоинт api/users для https://reqres.in/
 <p>
   1 Запрос на получение списка пользователей
 </p>
