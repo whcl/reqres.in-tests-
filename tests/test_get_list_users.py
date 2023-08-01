@@ -3,10 +3,15 @@ import requests
 from lib.assertions import Assertions
 import time
 import re
-
+import pytest
 
 class TestListUsersGet(BaseCase):
     LIST_USERS_URL = 'api/users'
+    delay_params = [
+        (3),
+        (4),
+        (5)
+    ]
 
     def test_list_users_without_params_response_code(self):
         list_users_response = requests.get(f'{self.BASE_URL}{self.LIST_USERS_URL}')
@@ -26,8 +31,8 @@ class TestListUsersGet(BaseCase):
         list_users_response = requests.get(f'{self.BASE_URL}{self.LIST_USERS_URL}', params=params)
         Assertions.assert_code_status(list_users_response, 200)
 
-    def test_list_users_with_delay_response_time(self):
-        test_delay_time = 3
+    @pytest.mark.parametrize('test_delay_time', delay_params)
+    def test_list_users_with_delay_response_time(self, test_delay_time):
         params = {
             'delay': test_delay_time,
         }

@@ -11,6 +11,11 @@ class TestListUsersGet(BaseCase):
         list_users_response = requests.post(f'{self.BASE_URL}{self.LIST_USERS_URL}', data=data)
         Assertions.assert_code_status(list_users_response, 201)
 
+    def test_list_users_post_response_code_negative(self):
+        data = self.prepare_post_data()
+        list_users_response = requests.post(f'{self.BASE_URL}{self.LIST_USERS_URL}', data=data)
+        Assertions.assert_code_status(list_users_response, 201)
+
     def test_list_users_post_response_has_fields(self):
         data = self.prepare_post_data()
         list_users_response = requests.post(f'{self.BASE_URL}{self.LIST_USERS_URL}', data=data)
