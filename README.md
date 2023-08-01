@@ -1,4 +1,5 @@
-# Тестовая документация (чек-лист и тест-кейсы) - https://docs.google.com/spreadsheets/d/1NA5hxfxMta5ZPtul88XyhIN_lctwIt94oNqT2Ip58cM/edit?usp=sharing
+# Тестовая документация (чек-лист и тест-кейсы) 
+<p> https://docs.google.com/spreadsheets/d/1NA5hxfxMta5ZPtul88XyhIN_lctwIt94oNqT2Ip58cM/edit?usp=sharing
 # Запуск автотестов
 <p>В рабочей директории выполнить следующие команды: </p>
 <p>
